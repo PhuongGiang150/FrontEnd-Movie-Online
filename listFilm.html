@@ -18,7 +18,7 @@
 <body>
     <div class="header">
         <a href="index.html" class="header__logo">
-            <img src="https://galaphim.net/images/logo/logo.webp" att="Ảnh">
+            <img src="/assets/img/phim-plus-tv.png" alt="">
         </a>
         <input type="checkbox" id="open-navbar" hidden>
         <label for="open-navbar" class="overlay bg-black"></label>
@@ -686,25 +686,7 @@
             </div>
         </div>
     </div>
-    <script>
-        var slider = document.getElementById("myRange");
-        var slider2 = document.getElementById("myRange2");
-        var output = document.getElementById("ratting");
-        var output2 = document.getElementById("year");
-        output.innerHTML = slider.value / 10;
-        output2.innerHTML = slider2.value;
-
-        slider.oninput = function() {
-            output.innerHTML = this.value / 10;
-        }
-        slider2.oninput = function() {
-            output2.innerHTML = this.value;
-        }
-        var Intro = document.getElementById("introduce");
-        var showIntro = document.getElementById("show-introduce");
-        showIntro.onclick = function() {
-            Intro.classList.toggle('change')
-        };
+    <script src="assets/js/fillter.js">
     </script>
 </body>
 
