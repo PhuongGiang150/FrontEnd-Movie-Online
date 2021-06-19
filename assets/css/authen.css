@@ -24,6 +24,7 @@ body {
 }
 
 .authen__logo img {
+    width: 150px;
     margin: 0 auto;
 }
 

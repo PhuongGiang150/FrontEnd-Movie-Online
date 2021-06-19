@@ -18,11 +18,33 @@
 <body>
     <div class="header">
         <a href="index.html" class="header__logo">
-            <img src="/assets/img/phim-plus-tv.png" alt="">
+            <img src="./assets/img/phim-plus-tv.png" alt="Logo">
         </a>
         <input type="checkbox" id="open-navbar" hidden>
         <label for="open-navbar" class="overlay bg-black"></label>
         <ul class="header__nav">
+            <li class="header__nav-item" id="account">
+                <!-- Chưa đăng nhập -->
+                <!-- <a href="#" class="header__nav-link">Tài Khoản</a>
+                <ul class="subnav__list" id="account-list">
+                    <li class="subnav__item">
+                        <a href="login.html" class="subnav__link">Đăng nhập</a>
+                        <a href="register.html" class="subnav__link">Đăng kí</a>
+                    </li>
+                </ul> -->
+
+                <!-- Đã đăng nhập -->
+                <a href="#" class="header__nav-link">
+                    <img class="acount__img" src="./assets/img/acount/girl.jpg" alt=""> Giang Tuấn Phương</a>
+                <ul class="subnav__list" id="account-list">
+                    <li class="subnav__item">
+                        <a href="login.html" class="subnav__link">Tài khoản</a>
+                        <a href="login.html" class="subnav__link">Thông báo</a>
+                        <a href="register.html" class="subnav__link">Đổi mật khẩu</a>
+                        <a href="register.html" class="subnav__link">Đăng xuất</a>
+                    </li>
+                </ul>
+            </li>
             <li class="header__nav-item">
                 <a href="listFilm.html" class="header__nav-link">Phim mới</a>
             </li>
@@ -182,14 +204,36 @@
                 </div>
             </div>
             </label>
-            <label for="show__notify-body" class="control-notify have">
-                    <i class="fas fa-bell"></i>
-                    <span class="notify__amount">3</span>
-            </label>
-            <label class="control-login">
+            <!-- Chưa đăng nhập -->
+            <!-- <div class="control-login">
                 <a href="login.html" class="btn btn-pink size-l">Đăng nhập</a>
                 <a href="login.html" class="login-icon"><i class="fas fa-sign-in-alt"></i></a>
-            </label>
+            </div> -->
+
+            <!-- Đã đăng nhập -->
+            <div class="control-login">
+                <img class="acount__img" src="./assets/img/acount/girl.jpg" alt="">
+                <span class="acount__name">Phương Giang</span>
+                <ul class="acount__list">
+                    <li>
+                        <a class="acount__link" href="#">
+                            <i class="fas fa-user-circle"></i> Tài khoản</a>
+                    </li>
+                    <li>
+                        <a class="acount__link" href="#">
+                            <i class="fas fa-bell"></i> Thông báo</a>
+                    </li>
+                    <li>
+                        <a class="acount__link" href="#">
+                            <i class="fas fa-exchange-alt"></i> Đổi mật khẩu</a>
+                    </li>
+                    <li>
+                        <a class="acount__link" href="#">
+                            <i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
+                    </li>
+                </ul>
+            </div>
+
         </div>
         <label for="open-navbar" class="navbar-icon">
             <span></span>

@@ -6,16 +6,17 @@
 }
 
 .banner__title {
-    font-size: 3.2rem;
+    font-size: 3.4rem;
     color: var(--text-cl-1);
     text-transform: uppercase;
     display: flex;
     justify-content: space-between;
     text-shadow: 0 0 15px var(--box-shadow-cl-1);
+    margin-bottom: 20px;
 }
 
 .banner__heading {
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .banner__move .move__icon {
@@ -44,6 +45,39 @@
 
 .main___highlight .tab__content {
     padding: 10px 0 60px 0;
+}
+
+
+/* Owl  */
+
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev {
+    position: absolute;
+    top: 45%;
+    font-size: 8rem;
+    font-weight: 300;
+    transform: translateY(-50%);
+    color: #fff;
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+    left: -20px;
+}
+
+.owl-carousel .owl-nav button.owl-next {
+    right: -20px;
+}
+
+.owl-carousel .owl-nav button.owl-next:hover,
+.owl-carousel .owl-nav button.owl-prev:hover {
+    background-color: transparent;
+    color: var(--btn-cl);
+}
+
+.tab__main {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    display: flex;
 }
 
 @media(max-width:1200px) {
@@ -132,6 +166,12 @@
         -webkit-transform: rotate(45deg) translate(-4px, -4.5px);
         transform: rotate(45deg) translate(-4px, -3.5px);
         width: 16px;
+    }
+    .owl-carousel .owl-nav button.owl-prev {
+        left: -5px;
+    }
+    .owl-carousel .owl-nav button.owl-next {
+        right: -5px;
     }
 }
 

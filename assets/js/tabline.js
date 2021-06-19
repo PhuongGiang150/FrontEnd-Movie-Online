@@ -31,20 +31,20 @@ tabFilms.forEach((tabFilm, index) => {
     }
 });
 
-// Input Range
-var slider = $("#myRange");
-var output = $("#ratting");
-output.innerHTML = slider.value / 10;
-slider.oninput = function() {
-    output.innerHTML = this.value / 10;
-}
+// // Input Range
+// var slider = $("#myRange");
+// var output = $("#ratting");
+// output.innerHTML = slider.value / 10;
+// slider.oninput = function() {
+//     output.innerHTML = this.value / 10;
+// }
 
-// Chose Episode
+// // Chose Episode
 
-var choseEpisode = $("#choose-episode");
-var Episode = $("#episode");
-var EpisodeIcon = $("#chose-icon");
-choseEpisode.onclick = function() {
-    Episode.classList.toggle('show');
-    EpisodeIcon.classList.toggle('down');
-};
+// var choseEpisode = $("#choose-episode");
+// var Episode = $("#episode");
+// var EpisodeIcon = $("#chose-icon");
+// choseEpisode.onclick = function() {
+//     Episode.classList.toggle('show');
+//     EpisodeIcon.classList.toggle('down');
+// };

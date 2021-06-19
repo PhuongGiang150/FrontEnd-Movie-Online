@@ -693,13 +693,12 @@ li.film-info__item .fa-star {
 
 .video-wrap {
     display: flex;
-    padding: 0 120px 60px;
+    padding: 0 60px 20px;
     background: #000;
 }
 
 .video-film {
     margin: auto;
-    background-image: url(../img/background/B-dai-thoai-tay-du.jpg);
 }
 
 .group-btn_video {
@@ -855,7 +854,7 @@ li.film-info__item .fa-star {
         height: 450px;
     }
     .video-wrap {
-        padding: 0 100px 50px;
+        padding: 0 40px 20px;
     }
 }
 
@@ -870,10 +869,16 @@ li.film-info__item .fa-star {
     }
 }
 
-@media(max-width:739px) and (min-width:481px) {
+@media(max-width:739px) {
     .video-wrap {
-        padding: 0;
+        padding: 0 10px 0;
     }
+    .film-relate__headding {
+        font-size: 2rem;
+    }
+}
+
+@media(max-width:739px) and (min-width:481px) {
     .film-trailer {
         height: 350px;
     }

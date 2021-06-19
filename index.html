@@ -6,23 +6,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang chủ Phim Online</title>
+    <!-- Roboto Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Icon -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <!-- Thư viện css -->
     <link rel="stylesheet" href="./assets/css/library.css">
+    <!-- Owl  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="./assets/owlCarousel/assets/owl.carousel.min.css">
+    <script src="./assets/owlCarousel/owl.carousel.min.js"></script>
+    <!-- Css chung -->
     <link rel="stylesheet" href="./assets/css/common.css">
     <link rel="stylesheet" href="./assets/css/layout.css">
+    <!-- Css trang chủ -->
     <link rel="stylesheet" href="./assets/css/home.css">
+
 </head>
 
 <body>
     <div class="header">
         <a href="index.html" class="header__logo">
-            <img src="/assets/img/phim-plus-tv.png" alt="">
+            <img src="./assets/img/phim-plus-tv.png" alt="Logo">
         </a>
         <input type="checkbox" id="open-navbar" hidden>
         <label for="open-navbar" class="overlay bg-black"></label>
         <ul class="header__nav">
+            <li class="header__nav-item" id="account">
+                <!-- Chưa đăng nhập -->
+                <!-- <a href="#" class="header__nav-link">Tài Khoản</a>
+                <ul class="subnav__list" id="account-list">
+                    <li class="subnav__item">
+                        <a href="login.html" class="subnav__link">Đăng nhập</a>
+                        <a href="register.html" class="subnav__link">Đăng kí</a>
+                    </li>
+                </ul> -->
+
+                <!-- Đã đăng nhập -->
+                <a href="#" class="header__nav-link">
+                    <img class="acount__img" src="./assets/img/acount/girl.jpg" alt=""> Giang Tuấn Phương</a>
+                <ul class="subnav__list" id="account-list">
+                    <li class="subnav__item">
+                        <a href="login.html" class="subnav__link">Tài khoản</a>
+                        <a href="login.html" class="subnav__link">Thông báo</a>
+                        <a href="register.html" class="subnav__link">Đổi mật khẩu</a>
+                        <a href="register.html" class="subnav__link">Đăng xuất</a>
+                    </li>
+                </ul>
+            </li>
             <li class="header__nav-item">
                 <a href="listFilm.html" class="header__nav-link">Phim mới</a>
             </li>
@@ -182,14 +214,36 @@
                 </div>
             </div>
             </label>
-            <label for="show__notify-body" class="control-notify have">
-                    <i class="fas fa-bell"></i>
-                    <span class="notify__amount">3</span>
-            </label>
-            <label class="control-login">
+            <!-- Chưa đăng nhập -->
+            <!-- <div class="control-login">
                 <a href="login.html" class="btn btn-pink size-l">Đăng nhập</a>
                 <a href="login.html" class="login-icon"><i class="fas fa-sign-in-alt"></i></a>
-            </label>
+            </div> -->
+
+            <!-- Đã đăng nhập -->
+            <div class="control-login">
+                <img class="acount__img" src="./assets/img/acount/girl.jpg" alt="">
+                <span class="acount__name">Phương Giang</span>
+                <ul class="acount__list">
+                    <li>
+                        <a class="acount__link" href="#">
+                            <i class="fas fa-user-circle"></i> Tài khoản</a>
+                    </li>
+                    <li>
+                        <a class="acount__link" href="#">
+                            <i class="fas fa-bell"></i> Thông báo</a>
+                    </li>
+                    <li>
+                        <a class="acount__link" href="#">
+                            <i class="fas fa-exchange-alt"></i> Đổi mật khẩu</a>
+                    </li>
+                    <li>
+                        <a class="acount__link" href="#">
+                            <i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
+                    </li>
+                </ul>
+            </div>
+
         </div>
         <label for="open-navbar" class="navbar-icon">
             <span></span>
@@ -198,79 +252,87 @@
         </label>
     </div>
     <div class="main">
-        <div class="banner" style="background-image: linear-gradient(0, rgba(29, 31, 48, 0.4), rgba(53, 54, 64, 0.5)), url(assets/img/background/B-dai-chien-thai-binh-duong.jpg);">
+        <div id="banner" class="banner" style="background-image: linear-gradient(0, rgba(29, 31, 48, 0.4), rgba(53, 54, 64, 0.5)), url(assets/img/background/B-dai-chien-thai-binh-duong.jpg);">
             <div class="grid wide">
                 <div class="banner__title">
                     <h3 class="banner__heading">Phim đề cử</h3>
-                    <div class="banner__move">
-                        <a href="#" class="move__icon fas fa-arrow-left"></a>
-                        <a href="#" class="move__icon fas fa-arrow-right"></a>
-                    </div>
                 </div>
-                <div class="row gt-l">
-                    <div class="col l-2-4 m-4 s-6">
-                        <div class="film__item">
-                            <div class="film__cover" style="background-image:url(assets/img/film/Doi-song-nguc-tu.jpg);">
-                                <span class="film__resolution">FullHD</span>
-                                <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
-                                <span class="film__runtime">92 Phút</span>
-                            </div>
-                            <div class="film__content">
-                                <a href="film.html" class="film__name">Đời Sống Ngục Tù</a>
-                                <p class="film__name-origin">Prison Playbook</p>
-                            </div>
+                <div class="owl-carousel owl-theme" id="slide">
+                    <div class="film__item">
+                        <div class="film__cover" style="background-image:url(assets/img/film/Doi-song-nguc-tu.jpg);">
+                            <span class="film__resolution">FullHD</span>
+                            <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
+                            <span class="film__runtime">92 Phút</span>
+                        </div>
+                        <div class="film__content">
+                            <a href="film.html" class="film__name">Đời Sống Ngục Tù</a>
+                            <p class="film__name-origin">Prison Playbook</p>
                         </div>
                     </div>
-                    <div class="col l-2-4 m-4 s-6">
-                        <div class="film__item">
-                            <div class="film__cover" style="background-image:url(assets/img/film/ban-trai-toi-la-ho-ly.png);">
-                                <span class="film__resolution">FullHD</span>
-                                <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
-                                <span class="film__runtime">16/16 Tập</span>
-                            </div>
-                            <div class="film__content">
-                                <a href="film.html" class="film__name">Bạn Trai Tôi Là Hồ Ly</a>
-                                <p class="film__name-origin">Ban trai toi la ho ly</p>
-                            </div>
+                    <div class="film__item">
+                        <div class="film__cover" style="background-image:url(assets/img/film/ban-trai-toi-la-ho-ly.png);">
+                            <span class="film__resolution">FullHD</span>
+                            <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
+                            <span class="film__runtime">16/16 Tập</span>
+                        </div>
+                        <div class="film__content">
+                            <a href="film.html" class="film__name">Bạn Trai Tôi Là Hồ Ly</a>
+                            <p class="film__name-origin">Ban trai toi la ho ly</p>
                         </div>
                     </div>
-                    <div class="col l-2-4 m-4 s-0">
-                        <div class="film__item">
-                            <div class="film__cover" style="background-image:url(assets/img/film/che-phuc.jpg);">
-                                <span class="film__resolution">FullHD</span>
-                                <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
-                                <span class="film__runtime">92 Phút</span>
-                            </div>
-                            <div class="film__content">
-                                <a href="film.html" class="film__name">Chế Phục</a>
-                                <p class="film__name-origin">A Chilling Cosplay</p>
-                            </div>
+                    <div class="film__item">
+                        <div class="film__cover" style="background-image:url(assets/img/film/che-phuc.jpg);">
+                            <span class="film__resolution">FullHD</span>
+                            <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
+                            <span class="film__runtime">92 Phút</span>
+                        </div>
+                        <div class="film__content">
+                            <a href="film.html" class="film__name">Chế Phục</a>
+                            <p class="film__name-origin">A Chilling Cosplay</p>
                         </div>
                     </div>
-                    <div class="col l-2-4 m-0 s-0">
-                        <div class="film__item">
-                            <div class="film__cover" style="background-image:url(assets/img/film/Dai-thoai-tay-du.jpg);">
-                                <span class="film__resolution">FullHD</span>
-                                <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
-                                <span class="film__runtime">88 Phút</span>
-                            </div>
-                            <div class="film__content">
-                                <a href="film.html" class="film__name">Đại Thoại Tây Du</a>
-                                <p class="film__name-origin">A Chinese Odyssey: Part One - Pandora's Box</p>
-                            </div>
+                    <div class="film__item">
+                        <div class="film__cover" style="background-image:url(assets/img/film/Dai-thoai-tay-du.jpg);">
+                            <span class="film__resolution">FullHD</span>
+                            <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
+                            <span class="film__runtime">88 Phút</span>
+                        </div>
+                        <div class="film__content">
+                            <a href="film.html" class="film__name">Đại Thoại Tây Du</a>
+                            <p class="film__name-origin">A Chinese Odyssey: Part One - Pandora's Box</p>
                         </div>
                     </div>
-                    <div class="col l-2-4 m-0 s-0">
-                        <div class="film__item">
-                            <div class="film__cover" style="background-image:url(assets/img/film/Doc-than-dua-vao-thuc-luc.jpg);">
-                                <span class="film__resolution">FullHD</span>
-                                <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
-                                <span class="film__runtime">24/24 Tập</span>
-                            </div>
-                            <div class="film__content">
-                                <a href="film.html" class="film__name">Tôi Độc Thân Dựa Vào Thực Lực</a>
-                                <p class="film__name-origin">Professional Singley</p>
-                            </div>
+                    <div class="film__item">
+                        <div class="film__cover" style="background-image:url(assets/img/film/Doc-than-dua-vao-thuc-luc.jpg);">
+                            <span class="film__resolution">FullHD</span>
+                            <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
+                            <span class="film__runtime">24/24 Tập</span>
+                        </div>
+                        <div class="film__content">
+                            <a href="film.html" class="film__name">Tôi Độc Thân Dựa Vào Thực Lực</a>
+                            <p class="film__name-origin">Professional Singley</p>
+                        </div>
+                    </div>
+                    <div class="film__item">
+                        <div class="film__cover" style="background-image:url(assets/img/film/ngoai-gia-lam-chieu.jpg);">
+                            <span class="film__resolution">FullHD</span>
+                            <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
+                            <span class="film__runtime">24/24 Tập</span>
+                        </div>
+                        <div class="film__content">
+                            <a href="film.html" class="film__name">Ngoại già lắm chiêu</a>
+                            <p class="film__name-origin">Professional Singley</p>
+                        </div>
+                    </div>
+                    <div class="film__item">
+                        <div class="film__cover" style="background-image:url(assets/img/film/nguoi-me-that-su.jpg);">
+                            <span class="film__resolution">FullHD</span>
+                            <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
+                            <span class="film__runtime">24/24 Tập</span>
+                        </div>
+                        <div class="film__content">
+                            <a href="film.html" class="film__name">Người mẹ thật sự</a>
+                            <p class="film__name-origin">Professional Singley</p>
                         </div>
                     </div>
                 </div>
@@ -862,36 +924,30 @@
                     <h3 class="tab__main-title">Phim Bộ Hàn Quốc</h3>
                     <a href="#" class="tab__main-icon fas fa-arrow-right"></a>
                 </div>
-                <div class="row gt-s" style="position: relative;">
-                    <a href="#" class="main__move-left"><i class="fas fa-chevron-left"></i></a>
-                    <a href="#" class="main__move-right"><i class="fas fa-chevron-right"></i></a>
-                    <div class="col l-2 m-4 s-6">
-                        <div class="film__item">
-                            <div class="film__cover" style="background-image: url(assets/img/film/nguoi-me-that-su.jpg);">
-                                <span class="film__resolution">HD-VietSub</span>
-                                <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
-                                <span class="film__runtime">92 Phút</span>
-                            </div>
-                            <div class="film__content">
-                                <a href="film.html" class="film__name">Người Mẹ Thực Sự</a>
-                                <p class="film__name-origin">The Wrong Mother</p>
-                            </div>
+                <div class="owl-carousel owl-theme" id="slide2">
+                    <div class="film__item">
+                        <div class="film__cover" style="background-image: url(assets/img/film/nguoi-me-that-su.jpg);">
+                            <span class="film__resolution">HD-VietSub</span>
+                            <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
+                            <span class="film__runtime">92 Phút</span>
+                        </div>
+                        <div class="film__content">
+                            <a href="film.html" class="film__name">Người Mẹ Thực Sự</a>
+                            <p class="film__name-origin">The Wrong Mother</p>
                         </div>
                     </div>
-                    <div class="col l-2 m-4 s-6">
-                        <div class="film__item">
-                            <div class="film__cover" style="background-image: url(assets/img/film/ngoai-gia-lam-chieu.jpg);">
-                                <span class="film__resolution">HD-VietSub</span>
-                                <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
-                                <span class="film__runtime">88 Phút</span>
-                            </div>
-                            <div class="film__content">
-                                <a href="film.html" class="film__name">Ngoại Già Lắm Chiêu</a>
-                                <p class="film__name-origin">Grannys Got Talent</p>
-                            </div>
+                    <div class="film__item">
+                        <div class="film__cover" style="background-image: url(assets/img/film/ngoai-gia-lam-chieu.jpg);">
+                            <span class="film__resolution">HD-VietSub</span>
+                            <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
+                            <span class="film__runtime">88 Phút</span>
+                        </div>
+                        <div class="film__content">
+                            <a href="film.html" class="film__name">Ngoại Già Lắm Chiêu</a>
+                            <p class="film__name-origin">Grannys Got Talent</p>
                         </div>
                     </div>
-                    <div class="col l-2 m-4 s-0">
+                    <div class="film__item">
                         <div class="film__cover" style="background-image: url(assets/img/film/ong-ban-gang-to.jpg);">
                             <span class="film__resolution">HDRip</span>
                             <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
@@ -902,7 +958,7 @@
                             <p class="film__name-origin">Man Of Men / Peopekteu maen</p>
                         </div>
                     </div>
-                    <div class="col l-2 m-0 s-0">
+                    <div class="film__item">
                         <div class="film__cover" style="background-image: url(assets/img/film/phap-su-mu.jpg);">
                             <span class="film__resolution">FullHD</span>
                             <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
@@ -913,7 +969,7 @@
                             <p class="film__name-origin">Blind Mage: Who's Died Raise Your Hand?</p>
                         </div>
                     </div>
-                    <div class="col l-2 m-0 s-0">
+                    <div class="film__item">
                         <div class="film__cover" style="background-image: url(assets/img/film/quy-ong-cua-toi.jpg);">
                             <span class="film__resolution">HD</span>
                             <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
@@ -924,7 +980,7 @@
                             <p class="film__name-origin">My Mister</p>
                         </div>
                     </div>
-                    <div class="col l-2 m-0 s-0">
+                    <div class="film__item">
                         <div class="film__cover" style="background-image: url(assets/img/film/sac-dep-doi-tra.jpg);">
                             <span class="film__resolution">FullHD</span>
                             <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
@@ -944,36 +1000,30 @@
                     <h3 class="tab__main-title">Phim Bộ Hoa Ngữ</h3>
                     <a href="#" class="tab__main-icon fas fa-arrow-right"></a>
                 </div>
-                <div class="row gt-s" style="position: relative;">
-                    <a href="#" class="main__move-left"><i class="fas fa-chevron-left"></i></a>
-                    <a href="#" class="main__move-right"><i class="fas fa-chevron-right"></i></a>
-                    <div class="col l-2 m-4 s-6">
-                        <div class="film__item">
-                            <div class="film__cover" style="background-image: url(assets/img/film/su-gia-dia-nguc.jpg);">
-                                <span class="film__resolution">HD</span>
-                                <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
-                                <span class="film__runtime">104 Phút</span>
-                            </div>
-                            <div class="film__content">
-                                <a href="film.html" class="film__name">Sứ Giả Đia Ngục</a>
-                                <p class="film__name-origin">Drive Angry</p>
-                            </div>
+                <div class="owl-carousel owl-theme" id="slide3">
+                    <div class="film__item">
+                        <div class="film__cover" style="background-image: url(assets/img/film/su-gia-dia-nguc.jpg);">
+                            <span class="film__resolution">HD</span>
+                            <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
+                            <span class="film__runtime">104 Phút</span>
+                        </div>
+                        <div class="film__content">
+                            <a href="film.html" class="film__name">Sứ Giả Đia Ngục</a>
+                            <p class="film__name-origin">Drive Angry</p>
                         </div>
                     </div>
-                    <div class="col l-2 m-4 s-6">
-                        <div class="film__item">
-                            <div class="film__cover" style="background-image: url(assets/img/film/tu-tien-truyen-chi-luyen-kiem.jpg);">
-                                <span class="film__resolution">FullHD</span>
-                                <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
-                                <span class="film__runtime">85 Phút</span>
-                            </div>
-                            <div class="film__content">
-                                <a href="film.html" class="film__name">Tu Tiên Truyện Chi Luyện Kiếm</a>
-                                <p class="film__name-origin">Blade of Flame</p>
-                            </div>
+                    <div class="film__item">
+                        <div class="film__cover" style="background-image: url(assets/img/film/tu-tien-truyen-chi-luyen-kiem.jpg);">
+                            <span class="film__resolution">FullHD</span>
+                            <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
+                            <span class="film__runtime">85 Phút</span>
+                        </div>
+                        <div class="film__content">
+                            <a href="film.html" class="film__name">Tu Tiên Truyện Chi Luyện Kiếm</a>
+                            <p class="film__name-origin">Blade of Flame</p>
                         </div>
                     </div>
-                    <div class="col l-2 m-4 s-0">
+                    <div class="film__item">
                         <div class="film__cover" style="background-image: url(assets/img/film/cuong-dao.jpg);">
                             <span class="film__resolution">HD - VietSub</span>
                             <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
@@ -984,7 +1034,7 @@
                             <p class="film__name-origin">Soul of BladesDoi Mat Am Duong</p>
                         </div>
                     </div>
-                    <div class="col l-2 m-0 s-0">
+                    <div class="film__item">
                         <div class="film__cover" style="background-image: url(assets/img/film/dai-chien-thai-binh-duong.jpg);">
                             <span class="film__resolution">FullHD - Thuyết Minh</span>
                             <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
@@ -995,7 +1045,7 @@
                             <p class="film__name-origin">Pacific Rim: The Black</p>
                         </div>
                     </div>
-                    <div class="col l-2 m-0 s-0">
+                    <div class="film__item">
                         <div class="film__cover" style="background-image: url(assets/img/film/mo-vuong-chi-vuong.jpg);">
                             <span class="film__resolution">FullHD</span>
                             <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
@@ -1006,7 +1056,7 @@
                             <p class="film__name-origin">Great King of the Grave</p>
                         </div>
                     </div>
-                    <div class="col l-2 m-0 s-0">
+                    <div class="film__item">
                         <div class="film__cover" style="background-image: url(assets/img/film/be-ha-ben-trai-sep-ben-phai.jpg);">
                             <span class="film__resolution">FullHD</span>
                             <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
@@ -1026,36 +1076,30 @@
                     <h3 class="tab__main-title">Phim Mỹ</h3>
                     <a href="#" class="tab__main-icon fas fa-arrow-right"></a>
                 </div>
-                <div class="row gt-s" style="position: relative;">
-                    <a href="#" class="main__move-left"><i class="fas fa-chevron-left"></i></a>
-                    <a href="#" class="main__move-right"><i class="fas fa-chevron-right"></i></a>
-                    <div class="col l-2 m-4 s-6">
-                        <div class="film__item">
-                            <div class="film__cover" style="background-image: url(assets/img/film/nguoi-me-that-su.jpg);">
-                                <span class="film__resolution">HD-VietSub</span>
-                                <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
-                                <span class="film__runtime">92 Phút</span>
-                            </div>
-                            <div class="film__content">
-                                <a href="film.html" class="film__name">Người Mẹ Thực Sự</a>
-                                <p class="film__name-origin">The Wrong Mother</p>
-                            </div>
+                <div class="owl-carousel owl-theme" id="slide4">
+                    <div class="film__item">
+                        <div class="film__cover" style="background-image: url(assets/img/film/nguoi-me-that-su.jpg);">
+                            <span class="film__resolution">HD-VietSub</span>
+                            <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
+                            <span class="film__runtime">92 Phút</span>
+                        </div>
+                        <div class="film__content">
+                            <a href="film.html" class="film__name">Người Mẹ Thực Sự</a>
+                            <p class="film__name-origin">The Wrong Mother</p>
                         </div>
                     </div>
-                    <div class="col l-2 m-4 s-6">
-                        <div class="film__item">
-                            <div class="film__cover" style="background-image: url(assets/img/film/ngoai-gia-lam-chieu.jpg);">
-                                <span class="film__resolution">HD-VietSub</span>
-                                <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
-                                <span class="film__runtime">88 Phút</span>
-                            </div>
-                            <div class="film__content">
-                                <a href="film.html" class="film__name">Ngoại Già Lắm Chiêu</a>
-                                <p class="film__name-origin">Grannys Got Talent</p>
-                            </div>
+                    <div class="film__item">
+                        <div class="film__cover" style="background-image: url(assets/img/film/ngoai-gia-lam-chieu.jpg);">
+                            <span class="film__resolution">HD-VietSub</span>
+                            <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
+                            <span class="film__runtime">88 Phút</span>
+                        </div>
+                        <div class="film__content">
+                            <a href="film.html" class="film__name">Ngoại Già Lắm Chiêu</a>
+                            <p class="film__name-origin">Grannys Got Talent</p>
                         </div>
                     </div>
-                    <div class="col l-2 m-4 s-0">
+                    <div class="film__item">
                         <div class="film__cover" style="background-image: url(assets/img/film/ong-ban-gang-to.jpg);">
                             <span class="film__resolution">HDRip</span>
                             <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
@@ -1066,7 +1110,7 @@
                             <p class="film__name-origin">Man Of Men / Peopekteu maen</p>
                         </div>
                     </div>
-                    <div class="col l-2 m-0 s-0">
+                    <div class="film__item">
                         <div class="film__cover" style="background-image: url(assets/img/film/phap-su-mu.jpg);">
                             <span class="film__resolution">FullHD</span>
                             <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
@@ -1077,7 +1121,7 @@
                             <p class="film__name-origin">Blind Mage: Who's Died Raise Your Hand?</p>
                         </div>
                     </div>
-                    <div class="col l-2 m-0 s-0">
+                    <div class="film__item">
                         <div class="film__cover" style="background-image: url(assets/img/film/quy-ong-cua-toi.jpg);">
                             <span class="film__resolution">HD</span>
                             <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
@@ -1088,7 +1132,7 @@
                             <p class="film__name-origin">My Mister</p>
                         </div>
                     </div>
-                    <div class="col l-2 m-0 s-0">
+                    <div class="film__item">
                         <div class="film__cover" style="background-image: url(assets/img/film/sac-dep-doi-tra.jpg);">
                             <span class="film__resolution">FullHD</span>
                             <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
@@ -1109,36 +1153,30 @@
                     <h3 class="tab__main-title">Hoạt Hình - Anime</h3>
                     <a href="#" class="tab__main-icon fas fa-arrow-right"></a>
                 </div>
-                <div class="row gt-s" style="position: relative;">
-                    <a href="#" class="main__move-left"><i class="fas fa-chevron-left"></i></a>
-                    <a href="#" class="main__move-right"><i class="fas fa-chevron-right"></i></a>
-                    <div class="col l-2 m-4 s-6">
-                        <div class="film__item">
-                            <div class="film__cover" style="background-image: url(assets/img/film/su-gia-dia-nguc.jpg);">
-                                <span class="film__resolution">HD</span>
-                                <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
-                                <span class="film__runtime">104 Phút</span>
-                            </div>
-                            <div class="film__content">
-                                <a href="film.html" class="film__name">Sứ Giả Đia Ngục</a>
-                                <p class="film__name-origin">Drive Angry</p>
-                            </div>
+                <div class="owl-carousel owl-theme" id="slide5">
+                    <div class="film__item">
+                        <div class="film__cover" style="background-image: url(assets/img/film/su-gia-dia-nguc.jpg);">
+                            <span class="film__resolution">HD</span>
+                            <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
+                            <span class="film__runtime">104 Phút</span>
+                        </div>
+                        <div class="film__content">
+                            <a href="film.html" class="film__name">Sứ Giả Đia Ngục</a>
+                            <p class="film__name-origin">Drive Angry</p>
                         </div>
                     </div>
-                    <div class="col l-2 m-4 s-6">
-                        <div class="film__item">
-                            <div class="film__cover" style="background-image: url(assets/img/film/tu-tien-truyen-chi-luyen-kiem.jpg);">
-                                <span class="film__resolution">FullHD</span>
-                                <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
-                                <span class="film__runtime">85 Phút</span>
-                            </div>
-                            <div class="film__content">
-                                <a href="film.html" class="film__name">Tu Tiên Truyện Chi Luyện Kiếm</a>
-                                <p class="film__name-origin">Blade of Flame</p>
-                            </div>
+                    <div class="film__item">
+                        <div class="film__cover" style="background-image: url(assets/img/film/tu-tien-truyen-chi-luyen-kiem.jpg);">
+                            <span class="film__resolution">FullHD</span>
+                            <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
+                            <span class="film__runtime">85 Phút</span>
+                        </div>
+                        <div class="film__content">
+                            <a href="film.html" class="film__name">Tu Tiên Truyện Chi Luyện Kiếm</a>
+                            <p class="film__name-origin">Blade of Flame</p>
                         </div>
                     </div>
-                    <div class="col l-2 m-4 s-0">
+                    <div class="film__item">
                         <div class="film__cover" style="background-image: url(assets/img/film/cuong-dao.jpg);">
                             <span class="film__resolution">HD - VietSub</span>
                             <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
@@ -1149,7 +1187,7 @@
                             <p class="film__name-origin">Soul of BladesDoi Mat Am Duong</p>
                         </div>
                     </div>
-                    <div class="col l-2 m-0 s-0">
+                    <div class="film__item">
                         <div class="film__cover" style="background-image: url(assets/img/film/dai-chien-thai-binh-duong.jpg);">
                             <span class="film__resolution">FullHD - Thuyết Minh</span>
                             <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
@@ -1160,7 +1198,7 @@
                             <p class="film__name-origin">Pacific Rim: The Black</p>
                         </div>
                     </div>
-                    <div class="col l-2 m-0 s-0">
+                    <div class="film__item">
                         <div class="film__cover" style="background-image: url(assets/img/film/mo-vuong-chi-vuong.jpg);">
                             <span class="film__resolution">FullHD</span>
                             <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
@@ -1171,7 +1209,7 @@
                             <p class="film__name-origin">Great King of the Grave</p>
                         </div>
                     </div>
-                    <div class="col l-2 m-0 s-0">
+                    <div class="film__item">
                         <div class="film__cover" style="background-image: url(assets/img/film/be-ha-ben-trai-sep-ben-phai.jpg);">
                             <span class="film__resolution">FullHD</span>
                             <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
@@ -1191,36 +1229,30 @@
                     <h3 class="tab__main-title">TV - Show</h3>
                     <a href="#" class="tab__main-icon fas fa-arrow-right"></a>
                 </div>
-                <div class="row gt-s" style="position: relative;">
-                    <a href="#" class="main__move-left"><i class="fas fa-chevron-left"></i></a>
-                    <a href="#" class="main__move-right"><i class="fas fa-chevron-right"></i></a>
-                    <div class="col l-2 m-4 s-6">
-                        <div class="film__item">
-                            <div class="film__cover" style="background-image: url(assets/img/film/nguoi-me-that-su.jpg);">
-                                <span class="film__resolution">HD-VietSub</span>
-                                <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
-                                <span class="film__runtime">92 Phút</span>
-                            </div>
-                            <div class="film__content">
-                                <a href="film.html" class="film__name">Người Mẹ Thực Sự</a>
-                                <p class="film__name-origin">The Wrong Mother</p>
-                            </div>
+                <div class="owl-carousel owl-theme" id="slide6">
+                    <div class="film__item">
+                        <div class="film__cover" style="background-image: url(assets/img/film/nguoi-me-that-su.jpg);">
+                            <span class="film__resolution">HD-VietSub</span>
+                            <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
+                            <span class="film__runtime">92 Phút</span>
+                        </div>
+                        <div class="film__content">
+                            <a href="film.html" class="film__name">Người Mẹ Thực Sự</a>
+                            <p class="film__name-origin">The Wrong Mother</p>
                         </div>
                     </div>
-                    <div class="col l-2 m-4 s-6">
-                        <div class="film__item">
-                            <div class="film__cover" style="background-image: url(assets/img/film/ngoai-gia-lam-chieu.jpg);">
-                                <span class="film__resolution">HD-VietSub</span>
-                                <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
-                                <span class="film__runtime">88 Phút</span>
-                            </div>
-                            <div class="film__content">
-                                <a href="film.html" class="film__name">Ngoại Già Lắm Chiêu</a>
-                                <p class="film__name-origin">Grannys Got Talent</p>
-                            </div>
+                    <div class="film__item">
+                        <div class="film__cover" style="background-image: url(assets/img/film/ngoai-gia-lam-chieu.jpg);">
+                            <span class="film__resolution">HD-VietSub</span>
+                            <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
+                            <span class="film__runtime">88 Phút</span>
+                        </div>
+                        <div class="film__content">
+                            <a href="film.html" class="film__name">Ngoại Già Lắm Chiêu</a>
+                            <p class="film__name-origin">Grannys Got Talent</p>
                         </div>
                     </div>
-                    <div class="col l-2 m-4 s-0">
+                    <div class="film__item">
                         <div class="film__cover" style="background-image: url(assets/img/film/ong-ban-gang-to.jpg);">
                             <span class="film__resolution">HDRip</span>
                             <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
@@ -1231,7 +1263,7 @@
                             <p class="film__name-origin">Man Of Men / Peopekteu maen</p>
                         </div>
                     </div>
-                    <div class="col l-2 m-0 s-0">
+                    <div class="film__item">
                         <div class="film__cover" style="background-image: url(assets/img/film/phap-su-mu.jpg);">
                             <span class="film__resolution">FullHD</span>
                             <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
@@ -1242,7 +1274,7 @@
                             <p class="film__name-origin">Blind Mage: Who's Died Raise Your Hand?</p>
                         </div>
                     </div>
-                    <div class="col l-2 m-0 s-0">
+                    <div class="film__item">
                         <div class="film__cover" style="background-image: url(assets/img/film/quy-ong-cua-toi.jpg);">
                             <span class="film__resolution">HD</span>
                             <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
@@ -1253,7 +1285,7 @@
                             <p class="film__name-origin">My Mister</p>
                         </div>
                     </div>
-                    <div class="col l-2 m-0 s-0">
+                    <div class="film__item">
                         <div class="film__cover" style="background-image: url(assets/img/film/sac-dep-doi-tra.jpg);">
                             <span class="film__resolution">FullHD</span>
                             <a href="film.html" class="film__play"><i class="fas fa-play"></i></a>
@@ -1570,6 +1602,129 @@
             </div>
         </div>
     </div>
+    <script>
+        $('#slide').owlCarousel({
+            loop: true,
+            margin: 35,
+            nav: true,
+            dots: false,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 2
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 5
+                }
+            }
+        })
+        $('#slide2').owlCarousel({
+            loop: true,
+            margin: 20,
+            nav: true,
+            dots: false,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 2
+                },
+                600: {
+                    items: 3
+                },
+                1200: {
+                    items: 6
+                }
+            }
+        })
+        $('#slide3').owlCarousel({
+            loop: true,
+            margin: 20,
+            nav: true,
+            dots: false,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 2
+                },
+                600: {
+                    items: 3
+                },
+                1200: {
+                    items: 6
+                }
+            }
+        })
+        $('#slide4').owlCarousel({
+            loop: true,
+            margin: 20,
+            nav: true,
+            dots: false,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 2
+                },
+                600: {
+                    items: 3
+                },
+                1200: {
+                    items: 6
+                }
+            }
+        })
+        $('#slide5').owlCarousel({
+            loop: true,
+            margin: 20,
+            nav: true,
+            dots: false,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 2
+                },
+                600: {
+                    items: 3
+                },
+                1200: {
+                    items: 6
+                }
+            }
+        })
+        $('#slide6').owlCarousel({
+            loop: true,
+            margin: 20,
+            nav: true,
+            dots: false,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 2
+                },
+                600: {
+                    items: 3
+                },
+                1200: {
+                    items: 6
+                }
+            }
+        })
+    </script>
+    <script src="./assets/js/home.js"></script>
     <script src="./assets/js/tabline.js"></script>
 </body>
 
